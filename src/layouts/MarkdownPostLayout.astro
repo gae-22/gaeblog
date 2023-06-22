@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+    <p class='mb-2 mt-5 italic'>
+        {frontmatter.pubDate.slice(0, 11)}
+    </p>
+    <article class='prose prose-slate md:prose-lg'>
+        <slot />
+    </article>
+</BaseLayout>
+
+<style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+</style>
