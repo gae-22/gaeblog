@@ -7,13 +7,15 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 <BaseLayout pageTitle='Posts'>
     <ul class='relative flex flex-wrap'>
         {
-            allPosts.map((post) => (
-                <BlogPost
-                    url={post.url}
-                    title={post.frontmatter.title}
-                    pubDate={post.frontmatter.pubDate}
-                />
-            ))
+            allPosts
+                .reverse()
+                .map((post) => (
+                    <BlogPost
+                        url={post.url}
+                        title={post.frontmatter.title}
+                        pubDate={post.frontmatter.pubDate}
+                    />
+                ))
         }
     </ul>
 </BaseLayout>
