@@ -12,6 +12,8 @@ author: 'gae'
 
 今回はその大まかな流れを記す．詳細は [gitlab](https://gitlab.mma.club.uec.ac.jp/gae/entersys) を参照．
 
+![実験段階の画面](./../../../public/post-2/post-2.png '実験段階の様子')
+
 ## 作成の経緯
 
 MMA では部室の入退室管理を Slack で行っている．コロナ禍になり，部室に誰がいたのかを把握しようという流れになったそう．入学前なので知らない．
