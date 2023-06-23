@@ -2,37 +2,8 @@
 const today = new Date();
 ---
 
-<footer class='fixed bottom-0 left-0 w-screen py-2 text-center opacity-90'>
+<footer class='fixed bottom-0 left-0 w-screen py-2 text-center'>
     <p>
         &copy; {today.getFullYear()} gae
     </p>
-    <nav class='md:hidden'>
-        <button id='button' type='button' class='fixed bottom-5 right-5 z-10'>
-            <i id='bars' class='fa-solid fa-bars fa-2x'></i>
-            <i id='xmark' class='fa-solid fa-xmark fa-2x hidden'></i>
-        </button>
-        <ul
-            id='menu'
-            class='fixed bottom-16 right-0 z-0 w-fit translate-x-full text-center text-xl transition-all'
-        >
-            <li class='p-3'>
-                <a class='rounded-lg px-3 py-1 text-center' href='/'>Home</a>
-            </li>
-            <li class='p-3'>
-                <a class='rounded-lg px-3 py-1 text-center' href='/posts'
-                    >Posts</a
-                >
-            </li>
-            <li class='p-3'>
-                <a class='rounded-lg px-3 py-1 text-center' href='/about'
-                    >About</a
-                >
-            </li>
-            <li class='p-3'>
-                <a class='rounded-lg px-3 py-1 text-center' href='/links'
-                    >Links</a
-                >
-            </li>
-        </ul>
-    </nav>
 </footer>

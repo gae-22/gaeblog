@@ -1,11 +1,14 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hamberger from '../components/Hamberger.astro';
 const { pageTitle } = Astro.props;
 ---
 
-<!-- <html lang='ja' class='m-auto mt-16 bg-gray-600 text-gray-300'> -->
-<html lang='ja' class='m-auto mt-16'>
+<html
+    lang='ja'
+    class='mx-auto mt-16 w-11/12 bg-slate-200 text-slate-700 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-5/12'
+>
     <head>
         <meta charset='utf-8' />
         <link rel='icon' type='image/svg+xml' href='/gae.JPG' />
@@ -25,13 +28,12 @@ const { pageTitle } = Astro.props;
         <title>gae's Blog</title></head
     >
 
-    <body
-        class='mx-auto w-11/12 bg-slate-200 text-slate-700 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-5/12'
-    >
+    <body class=''>
         <Header />
         <h1 class='-mt-10 mb-6 text-4xl font-bold md:mt-0'>{pageTitle}</h1>
         <slot />
         <Footer />
+        <Hamberger />
         <script>
             import '../scripts/menu.js';
         </script>
