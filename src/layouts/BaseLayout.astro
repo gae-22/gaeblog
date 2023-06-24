@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hamberger from '../components/Hamberger.astro';
+import Social from '../components/Social.astro';
 const { pageTitle } = Astro.props;
 ---
 
@@ -30,6 +31,7 @@ const { pageTitle } = Astro.props;
 
     <body class='mb-8'>
         <Header />
+        <Social />
         <h1 class='-mt-10 mb-6 text-4xl font-bold md:mt-0'>{pageTitle}</h1>
         <slot />
         <Footer />
