@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout>
-    <p class='mb-2 mt-5 italic'>
+    <p class='mt-5 italic'>
         {frontmatter.pubDate.slice(0, 11)}
     </p>
     <article class='prose prose-slate md:prose-lg'>
