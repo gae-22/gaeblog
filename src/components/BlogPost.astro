@@ -3,10 +3,10 @@ const { title, url, pubDate } = Astro.props;
 ---
 
 <li
-    class='relative m-4 mx-auto flex min-h-full w-5/12 content-center items-center justify-center'
+    class='relative m-4 mx-auto flex w-80 content-center items-center justify-center sm:w-48 md:min-h-full md:w-56'
 >
     <a
-        class='relative z-0 min-w-full flex-shrink-0 flex-grow-0 rounded-3xl border-b border-r border-slate-300 bg-gray-200 px-4 pb-10 pt-4 indent-1 text-xl font-bold shadow-md brightness-110 hover:underline'
+        class='relative z-0 min-w-full flex-shrink-0 flex-grow-0 rounded-3xl border-b border-r border-slate-300 bg-gray-200 px-4 pb-10 pt-4 indent-1 text-xl font-bold shadow-md brightness-110 hover:shadow-2xl'
         href={url}
     >
         {title}
