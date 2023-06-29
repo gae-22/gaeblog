@@ -1,19 +1,77 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hamberger from '../components/Hamberger.astro';
+import Social from '../components/Social.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout>
-    <p class='mt-5 italic'>
-        {frontmatter.pubDate.slice(0, 11)}
-    </p>
-    <article class='prose prose-slate md:prose-lg'>
-        <slot />
-    </article>
-</BaseLayout>
+<html
+    lang='ja'
+    class='mx-auto mt-16 w-11/12 bg-slate-200 text-slate-700 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-5/12'
+>
+    <head>
+        <meta charset='utf-8' />
+        <link rel='icon' type='image/svg+xml' href='/gae.JPG' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='generator' content={Astro.generator} />
+        <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'
+        />
+        <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'
+            integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=='
+            crossorigin='anonymous'
+            referrerpolicy='no-referrer'
+        />
+        <title>{frontmatter.title}</title></head
+    >
 
-<style>
+    <body class='mb-8'>
+        <Header />
+        <Social />
+        <p class='mt-5 italic'>
+            {frontmatter.pubDate.slice(0, 11)}
+        </p>
+        <h1 class='-mt-10 mb-6 text-5xl font-bold md:mt-0'>
+            {frontmatter.title}
+        </h1>
+
+        <article class='prose prose-slate text-justify md:prose-lg'>
+            <slot />
+        </article>
+        <Footer />
+        <Hamberger />
+        <script>
+            import '../scripts/menu.js';
+        </script>
+        <script>
+            button.addEventListener('click', (event) => {
+                bars.classList.toggle('hidden');
+                xmark.classList.toggle('hidden');
+                menu.classList.toggle('translate-x-full');
+            });
+        </script>
+    </body>
+</html>
+
+<script>
+    import '../scripts/cpcode.js';
+</script>
+
+<style is:global>
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
+
+    @layer components {
+        .remark-code-title {
+            @apply top-0 -mb-9 rounded-t-lg bg-gray-600 pb-[6px] pl-3 pt-1 text-sm font-semibold text-gray-200;
+        }
+    }
+    .copy-code {
+        @apply absolute -top-[20px] right-2 text-xs text-slate-200;
+    }
 </style>

@@ -2,8 +2,18 @@
 const today = new Date();
 ---
 
-<footer class='fixed bottom-0 left-0 w-screen bg-slate-200 py-2 text-center'>
-    <p>
+<footer
+    class='fixed bottom-0 left-0 right-0 flex items-center justify-center bg-transparent py-1 text-base'
+>
+    <p class='text-center shadow-md'>
         &copy; {today.getFullYear()} gae
     </p>
 </footer>
+
+<style>
+    footer {
+        text-shadow: 1px 1px 0 #e5e7eb, -1px -1px 0 #e5e7eb, -1px 1px 0 #e5e7eb,
+            1px -1px 0 #e5e7eb, 0px 1px 0 #e5e7eb, 0-1px 0 #e5e7eb,
+            -1px 0 0 #e5e7eb, 1px 0 0 #e5e7eb;
+    }
+</style>
